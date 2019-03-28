@@ -1,0 +1,10 @@
+def triangles(rn):
+    l,n,leng = [1,1],0,2
+    while n < rn:
+        yield l
+        lx = [1]* (leng + 1)
+        for i in range(1,leng):
+            lx[i] = l[i-1]+l[i]
+        l = lx
+        leng += 1
+        n += 1
